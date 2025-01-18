@@ -1,3 +1,12 @@
+---
+slug: autohotkey
+title: Python实验4：序列
+date: 2024-11-16
+authors: mlishu
+tags: [代码, Python]
+keywords: [代码, Python]
+---
+
 1.输入一个非空字符串，去除重复的字符后，从小到大排序，输出为一个新字符串。
 ```Python
 def process_string(s):
