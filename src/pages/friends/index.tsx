@@ -14,8 +14,8 @@ const ADD_FRIEND_URL = 'https://github.com/mlishu/blog/edit/main/data/friends.ts
 const SITE_INFO = `
 title: '璃殊'
 description: '道阻且长，行则将至'
-website: 'https://mlishu.cn'
-avatar: 'https://mlishu.cn/img/logo.png'
+website: 'https://mlishu.top'
+avatar: 'https://note.mlishu.top/img/logo.png'
 `
 const friends = Friends
 
