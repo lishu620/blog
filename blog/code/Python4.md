@@ -62,12 +62,15 @@ result = count_characters(s)
 print("每个字符出现的次数:", result)
 ```
 
-如果没有配置 httpsAgent，也就是没有配置证书，那么返回 400 错误 `400 No required SSL certificate was sent`。
+## 5.输入一个正整数m(20<=m<=100)，计算 11+12+13+...+m 的值
 
-配置成功将会得到正确的响应结果
+```Python
+def calculate_sum(m):
+    return sum(range(11, m + 1))
 
-```javascript
-{ code: 998, msg: '系统维护中...', data: null }
+m = int(input("请输入一个20到100之间的正整数 m："))
+result = calculate_sum(m)
+print("11到", m, "之间所有整数的和是:", result)
 ```
 
 ### python 的 requests
