@@ -1,93 +1,92 @@
 ---
-slug: Python4
 title: Python实验4：序列
+slug: Python4
 date: 2024-11-17
 authors: mlishu
 tags: [代码, Python]
 keywords: [代码, Python]
 ---
 
-在我学习Python的过程中，我完成的部分代码，于是我就写下了这篇博客来记录我的Python代码。
+在学习安卓逆向的时候，遇到一个 APP，服务端检测请求的 SSL 证书，需要提交 SSL 证书上去才能正常发送请求。而在开启抓包和协议复现的时候，请求是能正常发出去，但是服务器会返回 400 错误。于是便有了这篇文章来记录下。
 
-<!--truncate-->
+<!-- truncate -->
 
-## 1.输入一个非空字符串，去除重复的字符后，从小到大排序，输出为一个新字符串。
-```Python
-def process_string(s):
-    unique_sorted_chars = sorted(set(s))
-    return ''.join(unique_sorted_chars)
+## 说明
 
-s = input("请输入一个非空字符串：")
+由于是服务端效验客户端发送的证书，所以使用代理服务器（FD，Charles 等）抓包是会替换本地证书，当服务器效验客户端发送的证书与服务器内的证书不一致，那么就直接返回 400 错误，实际上请求还是能够发送出去，只是被服务器给拒绝了。俗称**双向认证**
 
-result = process_string(s)
-print("去除重复字符后并排序的新字符串是:", result)
+所以解决办法就是在请求的时候，将正确的证书也一同发送过去，这样服务端效验时就会将正常的响应结果返回给客户端，也就是**配置自定义证书**。
+
+### 例子
+
+APP 例子：隐约
+
+具体如何拉取证书，就是安卓逆向相关的部分了，这里我也只提供证书文件，不提供 app。
+
+贴上下载地址及密码
+
+证书: https://img.mlishu.cn/cert.p12
+
+密码: `xinghekeji888.x`
+
+### 证书转化
+
+[证书格式转换 (myssl.com)](https://myssl.com/cert_convert.html)
+
+[SSL 在线工具-在线证书格式转换-证书在线合并-p12、pfx、jks 证书在线合成解析-SSLeye 官网](https://www.ssleye.com/ssltool/jks_pkcs12.html)
+
+也可使用 OpenSSL 工具来进行转化证书
+
+## HTTP 发送请求
+
+### node 的 axios
+
+```javascript
+const axios = require('axios').default
+const fs = require('fs')
+const https = require('https')
+
+axios
+  .post(
+    `https://app.yyueapp.com/api/passLogin`,
+    {
+      mobile: '15212345678',
+      password: 'a123456',
+    },
+    {
+      httpsAgent: new https.Agent({
+        cert: fs.readFileSync('./cert.cer'),
+        key: fs.readFileSync('./cert.key'),
+        // pfx: fs.readFileSync('./cert.p12'),
+        // passphrase: 'xinghekeji888.x,
+      }),
+    },
+  )
+  .then((res) => {
+    console.log(res.data)
+  })
+  .catch((error) => {
+    console.log(error.response.data)
+  })
 ```
-## 2.输入一个字符串（包括大小写字母和空格），除去空格输出在字符串中出现过的字符。
-```Python
-def unique_characters(s):
-    unique_chars = set(s.replace(" ", ""))
-    return ''.join(unique_chars)
 
-s = input("请输入一个字符串（包括大小写字母和空格）：")
+如果没有配置 httpsAgent，也就是没有配置证书，那么返回 400 错误 `400 No required SSL certificate was sent`。
 
-result = unique_characters(s)
-print("去除空格后出现过的字符:", result)
+配置成功将会得到正确的响应结果
+
+```javascript
+{ code: 998, msg: '系统维护中...', data: null }
 ```
-## 3.使用给定的整数n，编写一个程序生成一个包含(i, i*i)的字典，该字典包含1到n之间的整数(两者都包含)。然后程序打印字典。
-```Python
-def generate_square_dict(n):
-    square_dict = {i: i * i for i in range(1, n + 1)}
-    return square_dict
 
-n = int(input("请输入一个整数 n："))
-result = generate_square_dict(n)
-print("生成的字典是:", result)
-```
-## 4.输入一个字符串，统计每个字符出现的次数。
-```Python
-def count_characters(s):
-    char_count = {}
-    for char in s:
-        char_count[char] = char_count.get(char, 0) + 1
-    return char_count
+### python 的 requests
 
-s = input("请输入一个字符串：")
-result = count_characters(s)
-print("每个字符出现的次数:", result)
-```
-## 5.输入一个正整数m(20<=m<=100)，计算 11+12+13+...+m 的值。
-```Python
-def calculate_sum(m):
-    return sum(range(11, m + 1))
+requests 不支持 p12 格式的证书，所以需要使用其他的证书格式，如下
 
-m = int(input("请输入一个20到100之间的正整数 m："))
-result = calculate_sum(m)
-print("11到", m, "之间所有整数的和是:", result)
-```
-## 6.从键盘读入一组数据（以半角逗号‘,’分割）存在一个列表中，并将列表按是否是素数分解为两个列表，统计输出这两个列表。
-```Python
-	def is_prime(n):
-    if n < 2:
-        return False
-    for i in range(2, int(n**0.5) + 1):
-        if n % i == 0:
-            return False
-    return True
+```python
+import requests
 
-def separate_primes(data):
-    primes = []
-    non_primes = []
-    for num in data:
-        if is_prime(num):
-            primes.append(num)
-        else:
-            non_primes.append(num)
-    return primes, non_primes
-
-data = list(map(int, input("请输入一组数据（以半角逗号分隔）：").split(',')))
-primes, non_primes = separate_primes(data)
-
-print("素数列表:", primes)
-print("非素数列表:", non_primes)
-
+r = requests.post('https://app.yyueapp.com/api/passLogin', data={
+                  'mobile': '15212345678', 'password': 'a123456'}, cert=('./cert.cer', './cert.key'))
+print(r.status_code)
+print(r.text)
 ```
