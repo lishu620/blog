@@ -62,7 +62,7 @@ result = count_characters(s)
 print("每个字符出现的次数:", result)
 ```
 
-## 5.输入一个正整数m(20<=m<=100)，计算 11+12+13+...+m 的值
+### 5.输入一个正整数m(20<=m<=100)，计算 11+12+13+...+m 的值
 
 ```Python
 def calculate_sum(m):
