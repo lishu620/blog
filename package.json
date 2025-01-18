@@ -2,7 +2,7 @@
   "name": "blog",
   "version": "3.0.0",
   "author": {
-    "url": "https://github.com/mlishu",
+    "url": "https://github.com/lishu620",
     "email": "hi@mlishu.cn",
     "name": "璃殊"
   },
@@ -10,7 +10,7 @@
     "url": "https://github.com/mlishu/blog",
     "type": "git"
   },
-  "homepage": "https://mlishu.cn",
+  "homepage": "https://mlishu.top",
   "license": "MIT",
   "scripts": {
     "docusaurus": "docusaurus",

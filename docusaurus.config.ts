@@ -9,7 +9,7 @@ const beian1 = '闽公网安备35021102000847号'
 
 const config: Config = {
   title: '璃殊',
-  url: 'https://mlishu.cn',
+  url: 'https://note.mlishu.top',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'mlishu',
