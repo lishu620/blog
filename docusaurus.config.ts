@@ -49,6 +49,7 @@ const config: Config = {
       },
       hideOnScroll: true,
       items: [
+        { label: '笔记', position: 'right', to: 'docs/skill' },
         { label: '博客', position: 'right', to: 'blog' },
         { label: '项目', position: 'right', to: 'project' },
         { label: '友链', position: 'right', to: 'friends' },
@@ -58,7 +59,6 @@ const config: Config = {
           position: 'right',
           items: [
             { label: '归档', to: 'blog/archive' },
-            { label: '笔记', to: 'docs/skill' },
             { label: '工具推荐', to: 'docs/tools' },
           ],
         },
