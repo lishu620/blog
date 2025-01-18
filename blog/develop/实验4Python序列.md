@@ -1,5 +1,5 @@
 ---
-slug: autohotkey
+slug: python-experiment-4
 title: Python实验4：序列
 date: 2024-11-16
 authors: mlishu
