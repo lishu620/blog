@@ -62,7 +62,16 @@ result = count_characters(s)
 print("每个字符出现的次数:", result)
 ```
 
-## 5.输入一个正整数m(20≤m≤100)，
+## 5.输入一个正整数m(20≤m≤100)，计算11+12+13+…+m的值
+
+```Python
+def calculate_sum(m):
+    return sum(range(11, m + 1))
+
+m = int(input("请输入一个20到100之间的正整数 m："))
+result = calculate_sum(m)
+print("11到", m, "之间所有整数的和是:", result)
+```
 
 ### python 的 requests
 
