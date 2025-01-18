@@ -62,6 +62,8 @@ result = count_characters(s)
 print("每个字符出现的次数:", result)
 ```
 
+## 5.测试
+
 ### python 的 requests
 
 requests 不支持 p12 格式的证书，所以需要使用其他的证书格式，如下
