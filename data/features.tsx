@@ -15,11 +15,11 @@ const FEATURES: FeatureItem[] = [
   {
     title: translate({
       id: 'homepage.feature.developer',
-      message: 'TypeScript 全栈工程师',
+      message: '网络软件开发',
     }),
     description: (
       <Translate>
-        作为一名 TypeScript 全栈工程师，秉着能用 TS 绝不用 JS 的原则，为项目提供类型安全的保障，提高代码质量和开发效率。
+        作为一名网络相关专业学生，为网络提供安全、稳定的连接，提高多人协作开发效率。
       </Translate>
     ),
     header: <WebDeveloperSvg className={'h-auto w-full'} height={150} role="img" />,
@@ -28,11 +28,11 @@ const FEATURES: FeatureItem[] = [
   {
     title: translate({
       id: 'homepage.feature.spider',
-      message: '会点逆向 & 爬虫',
+      message: '会点Java & 安全',
     }),
     description: (
       <Translate>
-        作为一名曾学习与实践逆向工程两年半的开发者，对于逆向工程有着浓厚的兴趣，同时造就了超凡的阅读代码能力。没有看不懂的代码，只有不想看的代码。
+        作为一名正在学习Java与网络安全的开发者，对于网络有着浓厚的兴趣，同时较好的网络管理能力。没有看不懂的，只有不想看的。
       </Translate>
     ),
     header: <SpiderSvg className={'h-auto w-full'} height={150} role="img" />,

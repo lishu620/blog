@@ -4,9 +4,6 @@ import { themes } from 'prism-react-renderer'
 import social from './data/social'
 import type { GiscusConfig } from './src/components/Comment'
 
-const beian = '闽ICP备2020017848号-2'
-const beian1 = '闽公网安备35021102000847号'
-
 const config: Config = {
   title: '璃殊',
   url: 'https://note.mlishu.top',
@@ -119,10 +116,6 @@ const config: Config = {
         },
       ],
       copyright: `
-        <p style="margin-bottom: 0;"><a href="http://beian.miit.gov.cn/">${beian}</a></p>
-        <p style="display: inline-flex; align-items: center;"><img style="height:20px;margin-right: 0.5rem;" src="/img/police.png" alt="police" height="20"/><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=${
-          beian1.match(/\d+/)?.[0]
-        }" >${beian1}</a></p>
         <p>Copyright © 2020 - ${new Date().getFullYear()} mlishu. | Built with Docusaurus.</p>
         `,
     },
@@ -233,7 +226,7 @@ const config: Config = {
           type: 'all',
           title: '璃殊',
           description: 'feedId:41215011978385457+userId:41840354283324416',
-          copyright: `Copyright © ${new Date().getFullYear()} 璃殊 Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`,
+          copyright: `Copyright © ${new Date().getFullYear()} 璃殊 Built with Docusaurus.`,
         },
       },
     ],
