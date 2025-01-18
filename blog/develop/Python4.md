@@ -11,7 +11,7 @@ keywords: [代码, Python]
 
 <!--truncate-->
 
-1.输入一个非空字符串，去除重复的字符后，从小到大排序，输出为一个新字符串。
+## 1.输入一个非空字符串，去除重复的字符后，从小到大排序，输出为一个新字符串。
 ```Python
 def process_string(s):
     unique_sorted_chars = sorted(set(s))
@@ -22,7 +22,7 @@ s = input("请输入一个非空字符串：")
 result = process_string(s)
 print("去除重复字符后并排序的新字符串是:", result)
 ```
-2.输入一个字符串（包括大小写字母和空格），除去空格输出在字符串中出现过的字符。
+## 2.输入一个字符串（包括大小写字母和空格），除去空格输出在字符串中出现过的字符。
 ```Python
 def unique_characters(s):
     unique_chars = set(s.replace(" ", ""))
@@ -33,7 +33,7 @@ s = input("请输入一个字符串（包括大小写字母和空格）：")
 result = unique_characters(s)
 print("去除空格后出现过的字符:", result)
 ```
-3.使用给定的整数n，编写一个程序生成一个包含(i, i*i)的字典，该字典包含1到n之间的整数(两者都包含)。然后程序打印字典。
+## 3.使用给定的整数n，编写一个程序生成一个包含(i, i*i)的字典，该字典包含1到n之间的整数(两者都包含)。然后程序打印字典。
 ```Python
 def generate_square_dict(n):
     square_dict = {i: i * i for i in range(1, n + 1)}
@@ -43,7 +43,7 @@ n = int(input("请输入一个整数 n："))
 result = generate_square_dict(n)
 print("生成的字典是:", result)
 ```
-4.输入一个字符串，统计每个字符出现的次数。
+## 4.输入一个字符串，统计每个字符出现的次数。
 ```Python
 def count_characters(s):
     char_count = {}
@@ -55,7 +55,7 @@ s = input("请输入一个字符串：")
 result = count_characters(s)
 print("每个字符出现的次数:", result)
 ```
-5.输入一个正整数m(20<=m<=100)，计算 11+12+13+...+m 的值。
+## 5.输入一个正整数m(20<=m<=100)，计算 11+12+13+...+m 的值。
 ```Python
 def calculate_sum(m):
     return sum(range(11, m + 1))
@@ -64,7 +64,7 @@ m = int(input("请输入一个20到100之间的正整数 m："))
 result = calculate_sum(m)
 print("11到", m, "之间所有整数的和是:", result)
 ```
-6.从键盘读入一组数据（以半角逗号‘,’分割）存在一个列表中，并将列表按是否是素数分解为两个列表，统计输出这两个列表。
+## 6.从键盘读入一组数据（以半角逗号‘,’分割）存在一个列表中，并将列表按是否是素数分解为两个列表，统计输出这两个列表。
 ```Python
 	def is_prime(n):
     if n < 2:
