@@ -38,44 +38,28 @@ print("去除空格后出现过的字符:", result)
 ```
 
 ## 3.使用给定的整数n，编写一个程序生成一个包含(i, i*i)的字典，该字典包含1到n之间的整数(两者都包含)。然后程序打印字典
+```Python
+def generate_square_dict(n):
+    square_dict = {i: i * i for i in range(1, n + 1)}
+    return square_dict
 
-[证书格式转换 (myssl.com)](https://myssl.com/cert_convert.html)
+n = int(input("请输入一个整数 n："))
+result = generate_square_dict(n)
+print("生成的字典是:", result)
+```
 
-[SSL 在线工具-在线证书格式转换-证书在线合并-p12、pfx、jks 证书在线合成解析-SSLeye 官网](https://www.ssleye.com/ssltool/jks_pkcs12.html)
+## 4.输入一个字符串，统计每个字符出现的次数
 
-也可使用 OpenSSL 工具来进行转化证书
+```Python
+def count_characters(s):
+    char_count = {}
+    for char in s:
+        char_count[char] = char_count.get(char, 0) + 1
+    return char_count
 
-## HTTP 发送请求
-
-### node 的 axios
-
-```javascript
-const axios = require('axios').default
-const fs = require('fs')
-const https = require('https')
-
-axios
-  .post(
-    `https://app.yyueapp.com/api/passLogin`,
-    {
-      mobile: '15212345678',
-      password: 'a123456',
-    },
-    {
-      httpsAgent: new https.Agent({
-        cert: fs.readFileSync('./cert.cer'),
-        key: fs.readFileSync('./cert.key'),
-        // pfx: fs.readFileSync('./cert.p12'),
-        // passphrase: 'xinghekeji888.x,
-      }),
-    },
-  )
-  .then((res) => {
-    console.log(res.data)
-  })
-  .catch((error) => {
-    console.log(error.response.data)
-  })
+s = input("请输入一个字符串：")
+result = count_characters(s)
+print("每个字符出现的次数:", result)
 ```
 
 如果没有配置 httpsAgent，也就是没有配置证书，那么返回 400 错误 `400 No required SSL certificate was sent`。
