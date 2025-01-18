@@ -73,15 +73,31 @@ result = calculate_sum(m)
 print("11到", m, "之间所有整数的和是:", result)
 ```
 
-### python 的 requests
+## 6.从键盘读入一组数据（以半角逗号‘,’分割）存在一个列表中，并将列表按是否是素数分解为两个列表，统计输出这两个列表
 
-requests 不支持 p12 格式的证书，所以需要使用其他的证书格式，如下
+```Python
+	def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
 
-```python
-import requests
+def separate_primes(data):
+    primes = []
+    non_primes = []
+    for num in data:
+        if is_prime(num):
+            primes.append(num)
+        else:
+            non_primes.append(num)
+    return primes, non_primes
 
-r = requests.post('https://app.yyueapp.com/api/passLogin', data={
-                  'mobile': '15212345678', 'password': 'a123456'}, cert=('./cert.cer', './cert.key'))
-print(r.status_code)
-print(r.text)
+data = list(map(int, input("请输入一组数据（以半角逗号分隔）：").split(',')))
+primes, non_primes = separate_primes(data)
+
+print("素数列表:", primes)
+print("非素数列表:", non_primes)
+
 ```
