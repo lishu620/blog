@@ -198,7 +198,7 @@ db.order.aggregate([
 
 ```js
 const mongoose = require('mongoose')
-let url = 'mongodb://localhost:27017/kuizuo'
+let url = 'mongodb://localhost:27017/mlishu'
 mongoose.connect(url, { useNewUrlParser: true }, function (err) {})
 ```
 
@@ -246,7 +246,7 @@ User.find({}, (err, doc) => {
 // 增加数据
 // 实例化对象
 let user = new User({
-  username: 'kuizuo',
+  username: 'mlishu',
   password: 'a12345678',
 })
 

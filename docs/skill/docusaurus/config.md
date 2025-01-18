@@ -2,7 +2,7 @@
 id: docusaurus-config
 slug: /docusaurus-config
 title: 配置文件
-authors: kuizuo
+authors: mlishu
 ---
 
 ## docusaurus.config.ts
@@ -13,18 +13,18 @@ authors: kuizuo
 
 ```typescript title='docusaurus.config.ts' icon='logos:docusaurus'
 const config: Config = {
-  title: '愧怍的小站',
-  url: 'https://kuizuo.cn',
+  title: '璃殊的小站',
+  url: 'https://mlishu.cn',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
-  organizationName: 'kuizuo',
+  organizationName: 'mlishu',
   projectName: 'blog',
   themeConfig: {
     image: 'img/logo.png',
     metadata: [
       {
         name: 'keywords',
-        content: '愧怍, kuizuo, blog, javascript, typescript, node, react, vue, web, 前端, 后端',
+        content: '璃殊, mlishu, blog, javascript, typescript, node, react, vue, web, 前端, 后端',
       },
     ],
     // ...
@@ -47,7 +47,7 @@ export default config
 
 ### 基本信息
 
-站点名和作者名只需要搜索 **愧怍** 或 **kuizuo** 便能找到关键位置，将其更改为你的便可。
+站点名和作者名只需要搜索 **璃殊** 或 **mlishu** 便能找到关键位置，将其更改为你的便可。
 
 ### 关于我 页面
 
@@ -59,9 +59,9 @@ export default config
 
 而 github 的状态信息使用[GitHub Profile Summary Cards](https://github-profile-summary-cards.vercel.app/demo.html) 或 [github-stats](https://github.com/jstrieb/github-stats) ，这里我选用 github-stats 因为带有动画，但需要图片需要自行构建。
 
-![](https://raw.githubusercontent.com/kuizuo/github-stats/master/generated/overview.svg#gh-light-mode-only)
+![](https://raw.githubusercontent.com/mlishu/github-stats/master/generated/overview.svg#gh-light-mode-only)
 
-![](https://raw.githubusercontent.com/kuizuo/github-stats/master/generated/languages.svg#gh-light-mode-only)
+![](https://raw.githubusercontent.com/mlishu/github-stats/master/generated/languages.svg#gh-light-mode-only)
 
 ### 友链、导航、项目 页面
 

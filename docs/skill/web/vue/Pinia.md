@@ -3,7 +3,7 @@ id: pinia
 slug: /pinia
 title: Pinia
 date: 2020-10-23
-authors: kuizuo
+authors: mlishu
 tags: [vue, pinia]
 keywords: [vue, pinia]
 ---
@@ -56,7 +56,7 @@ export const useUserStore = defineStore({
   id: 'user',
   state: (): UserState => {
     return {
-      name: 'kuizuo',
+      name: 'mlishu',
     }
   },
   getters: {
@@ -157,7 +157,7 @@ export const useUserStore = defineStore({
   id: 'user',
   state: (): UserState => {
     return {
-      name: 'kuizuo',
+      name: 'mlishu',
     }
   },
   persist: {

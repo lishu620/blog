@@ -3,7 +3,7 @@ id: git-push-multiple-remote-repos
 slug: git-push
 title: git 推送多个远程仓库
 date: 2023-11-09
-authors: kuizuo
+authors: mlishu
 tags: [git]
 keywords: [git]
 ---
@@ -16,15 +16,15 @@ keywords: [git]
 git remote set-url --add origin 远程仓库地址
 ```
 
-如：`git remote set-url --add origin https://git.kuizuo.cn/kuizuo/blog.git`
+如：`git remote set-url --add origin https://git.mlishu.cn/mlishu/blog.git`
 
 此时打开 `.git/config`，可以看到这样的配置
 
 ```bash {4}
 [remote "origin"]
-    url = https://github.com/kuizuo/blog.git
+    url = https://github.com/mlishu/blog.git
     fetch = +refs/heads/*:refs/remotes/origin/*
-    url = https://git.kuizuo.cn/kuizuo/blog.git
+    url = https://git.mlishu.cn/mlishu/blog.git
 ```
 
 上述命令 git 配置添加新的 url 记录。也可手动添加、修改。
