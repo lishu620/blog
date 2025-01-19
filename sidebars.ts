@@ -3,18 +3,6 @@ import type { SidebarsConfig } from '@docusaurus/plugin-content-docs'
 const sidebars: SidebarsConfig = {
   skill: [
     'skill/introduction',
-    // 云笔记配置
-    {
-      label: '云笔记',
-      type: 'category',
-      link: {
-        type: 'doc',
-        id: 'skill/note/note-guides',
-      },
-      items: [
-        'skill/note/note-comment',
-      ]
-    },
     {
       label: 'Docusaurus 主题魔改',
       type: 'category',
