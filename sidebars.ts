@@ -12,7 +12,7 @@ const sidebars: SidebarsConfig = {
         id: 'skill/note/note-guides',
       },
       items: [
-        
+        'skill/note/note-comment',
       ]
     },
     {
