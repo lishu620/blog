@@ -22,12 +22,12 @@ export const projects: Project[] = [
   // },
   
   {
-    title: 'Nuxt-Naive-Admin',
-    description: '🎁 一站式管理系统，融合 Nuxt、Naive UI 和 Supabase',
-    preview: '/img/project/nuxt-naive-admin.png',
-    website: 'https://nuxt-naive-admin.vercel.app',
-    source: 'https://github.com/mlishu/nuxt-naive-admin',
-    tags: ['opensource'],
+    title: 'MySQL-Study',
+    description: '一个在线的MySQL学习网站',
+    preview: '/img/project/mysql.png',
+    website: 'https://mysql.mlishu.top/',
+    source: 'https://github.com/lishu620/sqlmother',
+    tags: ['opensource', 'study'],
     type: 'toy',
   },
   
@@ -55,7 +55,7 @@ export type Tag = {
   color: string
 }
 
-export type TagType = 'favorite' | 'opensource' | 'product' | 'design' | 'large' | 'personal'
+export type TagType = 'favorite' | 'opensource' | 'product' | 'design' | 'large' | 'personal' | 'study'
 
 export type ProjectType = 'web' | 'app' | 'commerce' | 'personal' | 'toy' | 'other'
 
@@ -109,6 +109,11 @@ export const Tags: Record<TagType, Tag> = {
     description: '个人项目',
     color: '#12affa',
   },
+  study: {
+    label: '学习',
+    description: '学习项目',
+    color: '#12affa',
+  }
 }
 
 export const TagList = Object.keys(Tags) as TagType[]
