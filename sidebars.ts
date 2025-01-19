@@ -4,7 +4,7 @@ const sidebars: SidebarsConfig = {
   skill: [
     'skill/introduction',
     {
-      label: 'Docusaurus 主题魔改',
+      label: '云笔记部署',
       type: 'category',
       link: {
         type: 'doc',
