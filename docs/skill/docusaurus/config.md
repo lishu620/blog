@@ -13,8 +13,8 @@ authors: mlishu
 
 ```typescript title='docusaurus.config.ts' icon='logos:docusaurus'
 const config: Config = {
-  title: '璃殊的小站',
-  url: 'https://mlishu.cn',
+  title: '璃殊的云笔记本',
+  url: 'https://note.mlishu.top',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'mlishu',
