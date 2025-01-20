@@ -20,18 +20,7 @@ const sidebars: SidebarsConfig = {
         'skill/docusaurus/docusaurus-deploy',
       ],
     },
-    // 数据存储
-    {
-      label: '数据存储',
-      type: 'category',
-      link: {
-        type: 'doc',
-        id: 'skill/data-storage/data-storage-guides',
-      },
-      items: [
-        'skill/data-storage/about',
-      ],
-    },
+
     {
       label: '代码规范',
       type: 'category',
