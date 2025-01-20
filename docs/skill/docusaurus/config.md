@@ -59,9 +59,9 @@ export default config
 
 而 github 的状态信息使用[GitHub Profile Summary Cards](https://github-profile-summary-cards.vercel.app/demo.html) 或 [github-stats](https://github.com/jstrieb/github-stats) ，这里我选用 github-stats 因为带有动画，但需要图片需要自行构建。
 
-![](https://raw.githubusercontent.com/mlishu/github-stats/master/generated/overview.svg#gh-light-mode-only)
+![](https://raw.githubusercontent.com/lishu620/github-stats/master/generated/overview.svg#gh-light-mode-only)
 
-![](https://raw.githubusercontent.com/mlishu/github-stats/master/generated/languages.svg#gh-light-mode-only)
+![](https://raw.githubusercontent.com/lishu620/github-stats/master/generated/languages.svg#gh-light-mode-only)
 
 ### 友链、导航、项目 页面
 
