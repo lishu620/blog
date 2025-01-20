@@ -1,13 +1,9 @@
 export type Social = {
   github?: string
   x?: string
-  juejin?: string
-  qq?: string
-  wx?: string
   cloudmusic?: string
   zhihu?: string
   email?: string
-  discord?: string
 }
 
 type SocialValue = {
@@ -18,15 +14,10 @@ type SocialValue = {
 }
 
 const social: Social = {
-  github: 'https://github.com/mlishu',
-  x: 'https://twitter.com/mlishu',
-  juejin: 'https://juejin.cn/user/1565318510545901',
-  wx: 'https://img.mlishu.cn/wechat.png',
-  // qq: 'https://img.mlishu.cn/qq.png',
-  // zhihu: 'https://www.zhihu.com/people/mlishu',
-  cloudmusic: 'https://music.163.com/#/user/home?id=1333010742',
-  email: 'mailto:hi@mlishu.cn',
-  discord: 'https://discord.gg/M8cVcjDxkz',
+  github: 'https://github.com/lishu620',
+  x: 'https://twitter.com/m1ishu',
+  cloudmusic: 'https://music.163.com/#/user/home?id=2074448328',
+  email: 'mailto:myself@mlishu.top',
 }
 
 const socialSet: Record<keyof Social | 'rss', SocialValue> = {
@@ -36,41 +27,17 @@ const socialSet: Record<keyof Social | 'rss', SocialValue> = {
     icon: 'ri:github-line',
     color: '#010409',
   },
-  juejin: {
-    href: social.juejin,
-    title: '掘金',
-    icon: 'simple-icons:juejin',
-    color: '#1E81FF',
-  },
   x: {
     href: social.x,
     title: 'X',
     icon: 'ri:twitter-x-line',
     color: '#000',
   },
-  wx: {
-    href: social.wx,
-    title: '微信',
-    icon: 'ri:wechat-2-line',
-    color: '#07c160',
-  },
   zhihu: {
     href: social.zhihu,
     title: '知乎',
     icon: 'ri:zhihu-line',
     color: '#1772F6',
-  },
-  discord: {
-    href: social.discord,
-    title: 'Discord',
-    icon: 'ri:discord-line',
-    color: '#5A65F6',
-  },
-  qq: {
-    href: social.qq,
-    title: 'QQ',
-    icon: 'ri:qq-line',
-    color: '#1296db',
   },
   email: {
     href: social.email,
