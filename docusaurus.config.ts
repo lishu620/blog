@@ -5,7 +5,7 @@ import social from './data/social'
 import type { GiscusConfig } from './src/components/Comment'
 
 const config: Config = {
-  title: '璃殊',
+  title: '璃殊の云笔记',
   url: 'https://note.mlishu.top',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
@@ -77,8 +77,6 @@ const config: Config = {
             { label: '博客', to: 'blog' },
             { label: '归档', to: 'blog/archive' },
             { label: '技术笔记', to: 'docs/skill' },
-            { label: '实战项目', to: 'project' },
-            { label: '前端示例', to: 'https://example.mlishu.cn' },
           ],
         },
         {
@@ -86,19 +84,12 @@ const config: Config = {
           items: [
             { label: '关于我', to: '/about' },
             { label: 'GitHub', href: social.github.href },
-            { label: 'Twitter', href: social.x.href },
-            { label: '掘金', href: social.juejin.href },
-            { label: 'Discord', href: social.discord.href },
           ],
         },
         {
           title: '网站',
           items: [
-            { label: 'js反混淆', to: 'https://js-deobfuscator.mlishu.cn' },
-            { label: 'cyberChef', to: 'https://gchq.github.io/CyberChef' },
-            { label: 'api服务', to: 'https://api.mlishu.cn' },
-            { label: '便民服务', to: 'https://service.mlishu.cn' },
-            { label: '站点监控', to: 'https://uptime.mlishu.cn' },
+            { label: 'MySQL Study', to: 'https://mysql.mlishu.top' },
           ],
         },
         {

@@ -47,18 +47,6 @@
     "message": "算法",
     "description": "The label for category 算法 in sidebar skill"
   },
-  "sidebar.skill.category.逆向": {
-    "message": "逆向",
-    "description": "The label for category 逆向 in sidebar skill"
-  },
-  "sidebar.skill.category.逆向.link.generated-index.title": {
-    "message": "逆向笔记",
-    "description": "The generated-index page title for category 逆向 in sidebar skill"
-  },
-  "sidebar.skill.category.逆向.link.generated-index.description": {
-    "message": "Web逆向与安卓逆向笔记",
-    "description": "The generated-index page description for category 逆向 in sidebar skill"
-  },
   "sidebar.skill.category.安卓": {
     "message": "安卓",
     "description": "The label for category 安卓 in sidebar skill"
