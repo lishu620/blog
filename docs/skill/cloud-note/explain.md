@@ -7,7 +7,7 @@ authors: mlishu
 
 ## 根目录
 
-## blog目录
+## x 1import DocCardList from '@theme/DocCardList';2​3<DocCardList />mdx-code-block
 
 ## data目录
 
